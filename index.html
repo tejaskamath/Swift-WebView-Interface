@@ -5,9 +5,17 @@
   </head>
   <body>
     <h3 id="header">Hello World</h3>
-    <button onclick='invokeMessage()'>Type and Click</button>
-    <input type='text' name='firstname' id='name' value='Jamie'><br>
+    <button onclick='callNativeApp()'>Call Native Method</button>
     <script>
+
+      function callNativeApp () {
+        console.log('calling Native');
+        try {
+            webkit.messageHandlers.callbackHandler.postMessage("Hello from JavaScript");
+        } catch(err) {
+            console.log('The native context does not exist yet');
+        }
+      }
 
       function setFCMToken(token){
         $('#header').text(token)
