@@ -16,7 +16,7 @@
             secretToken: "secret"
           };
           window.webkit.messageHandlers.userLogin.postMessage(message);
-          
+
         } catch(err) {
             $('#header').text(err);
         }
@@ -24,20 +24,6 @@
 
       function setFCMToken(token){
         $('#header').text(token)
-      }
-
-      function customMessageCreator(name) {
-          return 'Hi ' + name + ' It\'s nice to meet you. I hope ' + name + ' has a nice day!'
-      }
-
-      function customMessageWithDictionary(nameDetails) {
-          var oData = JSON.parse(nameDetails);
-          return oData["name"] + " is awesome";
-      }
-
-      function invokeMessage() {
-          var inputName = document.getElementById('name').value
-          triggerWithCustomMessage(inputName)
       }
 
       </script>
