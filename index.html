@@ -5,6 +5,7 @@
   </head>
   <body>
     <h3 id="header">Hello World</h3>
+    <h5 id="subheader">Webkit</h5>
     <button onclick='callNativeApp()'>Call Native Method</button>
     <script>
 
@@ -13,8 +14,8 @@
             window.webkit.messageHandlers.callbackHandler.postMessage("Hello from JavaScript");
             $('#header').text('Just Called');
         } catch(err) {
-            console.log('The native context does not exist yet');
             $('#header').text(err);
+            $('#subheader').text(window.webkit);
         }
       }
 
