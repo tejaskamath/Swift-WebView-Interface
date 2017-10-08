@@ -10,7 +10,7 @@
 
       function callNativeApp () {
         try {
-            webkit.messageHandlers.callbackHandler.postMessage("Hello from JavaScript");
+            window.webkit.messageHandlers.callbackHandler.postMessage("Hello from JavaScript");
             $('#header').text('Just Called');
         } catch(err) {
             console.log('The native context does not exist yet');
