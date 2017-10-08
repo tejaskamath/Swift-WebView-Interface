@@ -11,11 +11,14 @@
 
       function callNativeApp () {
         try {
-            window.webkit.messageHandlers.callbackHandler.postMessage("Hello from JavaScript");
-            $('#header').text('Just Called');
+          var message = {
+            username: "Michael Phelps",
+            secretToken: "secret"
+          };
+          window.webkit.messageHandlers.userLogin.postMessage(message);
+          
         } catch(err) {
             $('#header').text(err);
-            $('#subheader').text(window.webkit.messageHandlers);
         }
       }
 
