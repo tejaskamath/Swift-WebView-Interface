@@ -1,3 +1,3 @@
 # Swift-WebView-Interface
 
-A code that allows passing code between Swift and Javascript within a WKWebView
+A code that enables passing variables between Swift and Javascript within a WKWebView
