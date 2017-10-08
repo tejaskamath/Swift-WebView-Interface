@@ -9,13 +9,12 @@
     <script>
 
       function callNativeApp () {
-
         try {
             webkit.messageHandlers.callbackHandler.postMessage("Hello from JavaScript");
-            alert('justCalled');
+            $('#header').text('Just Called');
         } catch(err) {
             console.log('The native context does not exist yet');
-            alert(err);
+            $('#header').text(err);
         }
       }
 
