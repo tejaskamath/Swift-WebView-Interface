@@ -15,7 +15,7 @@
             $('#header').text('Just Called');
         } catch(err) {
             $('#header').text(err);
-            $('#subheader').text(window.webkit.messageHandlers);
+            $('#subheader').text(JSON.stringify(window.webkit));
         }
       }
 
